@@ -49,4 +49,6 @@ function App() {
    );
 }
 
+// http://localhost:8080/auth/forgot-password/email-sent
+
 export default App;

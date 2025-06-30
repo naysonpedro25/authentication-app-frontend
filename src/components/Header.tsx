@@ -169,7 +169,7 @@ export function Header() {
 
             <SheetFooter>
                <Button
-                  className="bg-yellow-500 p-0 h-12 text-base font-bold hover:bg-yellow-600"
+                  className="bg-yellow-500 p-0 h-12 text-base font-bold hover:bg-my-red-300"
                   onClick={async () => {
                      try {
                         setIsLoadingLogout(true);

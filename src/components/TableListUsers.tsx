@@ -137,6 +137,15 @@ export function TableListUsers({ users, page }: TableListProps) {
                                     className="rounded-sm bg-grey-900 h-11 border-0 text-white text-base focus-visible:border-2 focus-visible:border-green-300 focus-visible:ring-0"
                                     placeholder="Senha*"
                                  />
+                                 <Button
+                                    type="button"
+                                    variant="ghost"
+                                    size="icon"
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-transparent hover:bg-grey-600"
+                                    onClick={() =>
+                                       setShowPassword((prev) => !prev)
+                                    }
+                                 ></Button>
 
                                  {user?.role === 'ADM' && (
                                     <div className="flex gap-4 mt-4">
