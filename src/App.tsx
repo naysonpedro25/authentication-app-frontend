@@ -13,29 +13,26 @@ import { ResetPassword } from './Pages/ResetPassword';
 function App() {
    return (
       <Routes>
-         <Route path="*" element={<NotFound />} />
-
          <Route path="/" element={<Home />} />
          <Route path="/home" element={<Home />} />
-         <Route path="/auth">
-            <Route path="" element={<Login />} />
-            <Route path="forgot-password">
-               <Route path="" element={<ForgotPassword />} />
-               <Route path="reset-password" element={<ResetPassword />} />
-               <Route
-                  path="email-sent"
-                  element={<EmailSent objective="forgot-password" />}
-               />
-            </Route>
-         </Route>
-         <Route path="/register">
-            <Route path="" element={<Resgister />} />
-            <Route
-               path="email-sent"
-               element={<EmailSent objective="register" />}
-            />
-            <Route path="email-validated" element={<EmailValidated />} />
-         </Route>
+
+         <Route path="/auth" element={<Login />} />
+         <Route path="/auth/forgot-password" element={<ForgotPassword />} />
+         <Route
+            path="/auth/forgot-password/reset-password"
+            element={<ResetPassword />}
+         />
+         <Route
+            path="/auth/forgot-password/email-sent"
+            element={<EmailSent objective="forgot-password" />}
+         />
+
+         <Route path="/register" element={<Resgister />} />
+         <Route
+            path="/register/email-sent"
+            element={<EmailSent objective="register" />}
+         />
+         <Route path="/register/email-validated" element={<EmailValidated />} />
 
          <Route
             path="/users"
@@ -45,6 +42,7 @@ function App() {
                </PrivateRoute>
             }
          />
+         <Route path="*" element={<NotFound />} />
       </Routes>
    );
 }

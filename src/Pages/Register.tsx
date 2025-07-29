@@ -25,7 +25,7 @@ export function Resgister() {
 
    const navigator = useNavigate();
    const [isLoading, setIsLoading] = useState(false);
-   const navigate = useNavigate();
+   // const navigate = useNavigate();
 
    const registerFormShcema = z
       .object({
@@ -79,7 +79,7 @@ export function Resgister() {
                <div className="flex gap-1">
                   <Button
                      className="bg-green-500 text-sm font-bold hover:bg-green-300"
-                     onClick={() => navigate('/users ')}
+                     onClick={() => navigator('/users ')}
                   >
                      Sim
                   </Button>
